@@ -1,4 +1,4 @@
-/* Font */
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
 *{
     font-family: 'Nunito', sans-serif !important;
@@ -20,15 +20,9 @@ button:focus{
     border: none !important;
     box-shadow: none !important;
 }
-/* button:active{
-    background-color: transparent;
-} */
 
-/* HOME */
 .home {
-    /* margin-top: 20px; */
     border: none;
-    /* margin: 20px !important; */
 }
 
 #card-home{
@@ -37,8 +31,6 @@ button:focus{
     width: 958px;
     height: 400px;
     left: 85px;
-
-/* HOME BACKGROUND */
 }
 .img-1st{
     position: absolute;
@@ -60,8 +52,6 @@ button:focus{
     left: 36.5rem;
     top: 0rem;
 
-
-/* HOME BACKGROUND END*/
 }
 #img-main-bg{
     position: absolute;
@@ -149,7 +139,6 @@ NAVBAR BUTTON
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
-/* identical to box height */
     align-items: center;
     text-align: center;
     color: #BD0707 !important;
@@ -160,7 +149,6 @@ NAVBAR BUTTON
 }
 
 .btnRegister {
-    /* position: absolute;*/
     font-family: 'Product Sans';
     font-style: normal;
     width: 100px;
@@ -180,7 +168,6 @@ NAVBAR BUTTON
     background-color: #BD0707;
 }
 
-/* MODAL================= */
 .header-login p{
     width: 95px;
     height: 49px;
@@ -232,7 +219,6 @@ NAVBAR BUTTON
 
 }
 
-/* Detail Product */
 .detailProductContainer{
     display: flex;
     justify-content: space-between;
@@ -282,7 +268,6 @@ NAVBAR BUTTON
     display:none;
     position: absolute;
     margin-left: 3rem;
-    /* margin-bottom: 3rem; */
 }
 .checkContainer input:checked ~ .checkMark {
     display: block;
@@ -304,8 +289,6 @@ NAVBAR BUTTON
     margin: 14px 0px 0px 22px;
 }
 
-
-/* Cart */
 .listPaymentInCart{
     display: flex;
     justify-content: space-between;
@@ -337,7 +320,6 @@ hr{
 }
 
 
-/* Admin */
 table{
     border: 1px solid;
     width: 10vw;
@@ -367,7 +349,6 @@ td{
     color: #00d1ff;
 }
 
-/* Profile */
 .myProfileContainer{
     display: flex;
     justify-content: space-between;
@@ -407,7 +388,6 @@ text-align: center;
     align-items: center;
 }
 
-/* dropdown */
 .dropdown-toggle::after{
     display: none !important;
 }
@@ -439,21 +419,17 @@ text-align: center;
     color: black;
 }
 
-/* ADD-PRODUCT ================= */
 #add-product {
-    /* width: 958px; */
     height: 400px;
     left: 85px;
 }
 
 .left-side {
-    /* width: 550px; */
     text-align: justify;
     padding-right: 30px;
 }
 
 .left-side h1 {
-    /* width: 133px; */
     height: 22px;
     left: 87px;
     top: 230px;
