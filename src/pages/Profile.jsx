@@ -1,7 +1,7 @@
 import React from 'react'
 import {Container, Row, Card} from 'react-bootstrap'
 import ProfileImg from '../assets/profile.svg'
-import CoffeeTransaction from '../assets/coffeeTransaction.svg'
+import CoffeeTransaction from '../assets/coffeeTransaction.png'
 import Logo from '../assets/logo.svg'
 import QRCode from 'react-qr-code'
 import Navbar from '../components/Nav/Navbar'
