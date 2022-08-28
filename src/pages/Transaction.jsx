@@ -9,13 +9,13 @@ import { API } from "../config/api";
 function Transaction() {
     // const [incomeTransaction] = useState(DummyIncomeTransaction)
 
-    const [showTrans, setShowTrans] = useState(false);
+    const [showTransaction, setShowTransaction] = useState(false);
     const [idOrder, setIdOrder] = useState(null);
 
-    const handleClose = () => setShowTrans(false);
+    const handleClose = () => setShowTransaction(false);
     const handleShow = (id) => {
     setIdOrder(id);
-    setShowTrans(true);
+    setShowTransaction(true);
   };
 
     // Fetching product data from database
