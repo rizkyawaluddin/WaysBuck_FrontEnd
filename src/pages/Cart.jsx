@@ -3,7 +3,7 @@ import { Container, Col, Button } from "react-bootstrap"
 import Rupiah from "rupiah-format";
 import { useEffect } from "react";
 
-import CoffeeCart from '../assets/CoffeeCart.svg'
+// import CoffeeCart from '../assets/CoffeeCart.svg'
 import Bin from '../assets/bin1.svg'
 import cartModules from "../assets/styles/cart.module.css"
 import ModalCart from "../components/modal/ModalCart"
