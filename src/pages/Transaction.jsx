@@ -6,11 +6,22 @@ import ModalTransaction from "../components/modal/ModalTransaction";
 import Navbar from "../components/Nav/Navbar";
 
 function Transaction() {
-    const [incomeTransaction] = useState(DummyIncomeTransaction)
+    // const [incomeTransaction] = useState(DummyIncomeTransaction)
 
-    const [showTransaction, setShowTransaction] = useState(false)
-    const handleShow = () => setShowTransaction(true)
-    const handleClose = () => setShowTransaction(false)
+    const [showTrans, setShowTrans] = useState(false);
+    const [idOrder, setIdOrder] = useState(null);
+
+    const handleClose = () => setShowTrans(false);
+    const handleShow = (id) => {
+    setIdOrder(id);
+    setShowTrans(true);
+  };
+
+    // Fetching product data from database
+    let { data: transactions } = useQuery("transactionsCache", async () => {
+        const response = await API.get("/transactions");
+        return response.data.data;
+    });
 
     return(
         <>
@@ -31,13 +42,15 @@ function Transaction() {
                     </thead>
                     <tbody>
                     {/* MAPPING */}
-                        {incomeTransaction.map((item,index) => (
-                            <tr key={index} onClick={handleShow}>
-                            <td>{item?.no}</td>
-                            <td>{item?.name}</td>
-                            <td>{item?.address}</td>
-                            <td>{item?.postCode}</td>
-                            <td className="tdPrice">{item?.income}</td>
+                        {transactions.map((item,index) => (
+                            <tr onClick={() => handleShow(item?.id)}
+                            key={index}
+                            className={item.status === "" ? "dnone" : ""}>
+                            <td>{index + 1}</td>
+                            <td>{item?.user.name}</td>
+                            <td>{item?.user.profile?.address}</td>
+                            <td>{item?.user.profile?.postal_code}</td>
+                            <td className="tdPrice">{Rupiah.convert(item?.total)}</td>
                             <td className={
                                 item.status === 'Success'
                                 ? 'statusSuccess'
@@ -46,14 +59,15 @@ function Transaction() {
                                 : item.status === 'Waiting Approve'
                                 ? 'statusWaiting'
                                 :'statusWay'
-                            }>{item?.status}
+                            }> 
+                            {item?.status}
                             </td>
                         </tr>
                         ))}
                     </tbody>
                 </Table>
             </div>
-            <ModalTransaction showTransaction={showTransaction} close={handleClose}/>
+            <ModalTransaction showTransaction={showTransaction} close={handleClose} id={idOrder}/>
         </Container>
         </>
     )
