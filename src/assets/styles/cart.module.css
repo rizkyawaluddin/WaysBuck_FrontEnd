@@ -68,12 +68,12 @@ span{
     margin-bottom: 15px;
   }
 .right>span{
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 .rightline>span{
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .btn_grp{
@@ -90,7 +90,7 @@ span{
   border: none;
 }
 
-/* font */
+
 .titlePage{
   font-size: 40px;
   font-weight: 900;

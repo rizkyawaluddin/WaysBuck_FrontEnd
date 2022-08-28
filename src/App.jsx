@@ -15,7 +15,7 @@ import AddProduct from "./pages/AddProduct";
 import AddToping from './pages/AddToping';
 
 // Init token on axios every time the app is refreshed
-if (localStorage.token) {
+if (localStorage.token) { 
   setAuthToken(localStorage.token)
 }
 
