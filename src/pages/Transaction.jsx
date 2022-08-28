@@ -44,21 +44,21 @@ function Transaction() {
                     </thead>
                     <tbody>
                     {/* MAPPING */}
-                        {transactions.map((item,index) => (
+                        {transactions?.map((item,index) => (
                             <tr onClick={() => handleShow(item?.id)}
                             key={index}
-                            className={item.status === "" ? "dnone" : ""}>
+                            className={item?.status === "" ? "dnone" : ""}>
                             <td>{index + 1}</td>
-                            <td>{item?.user.name}</td>
-                            <td>{item?.user.profile?.address}</td>
-                            <td>{item?.user.profile?.postal_code}</td>
+                            <td>{item?.user?.name}</td>
+                            <td>{item?.user?.profile?.address}</td>
+                            <td>{item?.user?.profile?.postal_code}</td>
                             <td className="tdPrice">{item?.total}</td>
                             <td className={
-                                item.status === 'Success'
+                                item?.status === 'Success'
                                 ? 'statusSuccess'
-                                : item.status === 'Cancel'
+                                : item?.status === 'Cancel'
                                 ? 'statusCancel'
-                                : item.status === 'Waiting Approve'
+                                : item?.status === 'Waiting Approve'
                                 ? 'statusWaiting'
                                 :'statusWay'
                             }> 
