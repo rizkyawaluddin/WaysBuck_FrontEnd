@@ -2,7 +2,7 @@ import React from "react";
 import { Modal } from "react-bootstrap";
 import QRCode from 'react-qr-code'
 import Logo from '../../assets/logo.svg'
-import CoffeeTransaction from '../../assets/coffeeTransaction.svg'
+import CoffeeTransaction from '../../assets/coffeeTransaction.png'
 
 
 export default function ModalTransaction({showTransaction, close}) {
