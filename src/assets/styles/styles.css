@@ -368,11 +368,11 @@ td{
     color: #613d2b;
 }
 .bgStatusBlue{
-background-color: #DEDADE;
-width: 100px;
-height: 19px;
-border-radius: 2px;
-text-align: center;
+    background-color: #DEDADE;
+    width: 100px;
+    height: 19px;
+    border-radius: 2px;
+    text-align: center;
 }
 .childCardTransaction{
     padding: 1.2rem;

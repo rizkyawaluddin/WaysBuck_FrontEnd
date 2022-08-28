@@ -3,7 +3,7 @@ import { API, setAuthToken } from "./config/api";
 import { useContext, useEffect } from "react";
 import { UserContext } from "./context/UserContext";
 
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './assets/styles/styles.css'
 
 import DetailProduct from "./pages/DetailProduct";
