@@ -1,9 +1,10 @@
 import { Container, } from "react-bootstrap"
 import Table from 'react-bootstrap/Table';
 import React, { useState} from 'react';
-import DummyIncomeTransaction from '../DummyData/IncomeTransaction'
+// import DummyIncomeTransaction from '../DummyData/IncomeTransaction'
 import ModalTransaction from "../components/modal/ModalTransaction";
 import Navbar from "../components/Nav/Navbar";
+import { API } from "../config/api";
 
 function Transaction() {
     // const [incomeTransaction] = useState(DummyIncomeTransaction)
@@ -50,7 +51,7 @@ function Transaction() {
                             <td>{item?.user.name}</td>
                             <td>{item?.user.profile?.address}</td>
                             <td>{item?.user.profile?.postal_code}</td>
-                            <td className="tdPrice">{Rupiah.convert(item?.total)}</td>
+                            <td className="tdPrice">{item?.total}</td>
                             <td className={
                                 item.status === 'Success'
                                 ? 'statusSuccess'
